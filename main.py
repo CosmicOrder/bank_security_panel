@@ -8,9 +8,5 @@ django.setup()
 from datacenter.models import Passcard  # noqa: E402
 
 if __name__ == '__main__':
-    active_passcards = []
-    passcards = Passcard.objects.all()
-    for passcard in passcards:
-        if passcard.is_active:
-            active_passcards.append(passcard)
+    active_passcards = Passcard.objects.filter(is_active=True)
     print(len(active_passcards))
