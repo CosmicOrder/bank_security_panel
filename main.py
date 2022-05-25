@@ -8,7 +8,5 @@ django.setup()
 from datacenter.models import Visit
 
 if __name__ == '__main__':
-    visitors = Visit.objects.all()
+    visitors = Visit.objects.filter(leaved_at=None)
     print(visitors)
-
-
