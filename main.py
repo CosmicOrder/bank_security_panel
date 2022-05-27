@@ -15,5 +15,6 @@ if __name__ == '__main__':
         entered_at = localtime(visitor.entered_at)
         now = make_aware(datetime.datetime.now())
         located_time = now - entered_at
+        print(visitor.passcard)
         print('Зашёл в хранилище, время по Москве: ', entered_at)
         print('Находится в хранилище: ', located_time)
