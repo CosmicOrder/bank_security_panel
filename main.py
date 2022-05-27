@@ -10,7 +10,7 @@ django.setup()
 from datacenter.models import Visit
 
 if __name__ == '__main__':
-    visitors = Visit.objects.filter()
+    visitors = Visit.objects.filter(leaved_at=None)
     for visitor in visitors:
         entered_at = localtime(visitor.entered_at)
         now = make_aware(datetime.datetime.now())
